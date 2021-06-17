@@ -3,7 +3,6 @@
     <div class="navstyle">
       <router-link to="/">Home</router-link>
       <router-link to="/categories">Categories</router-link>
-      <router-link to="/random">Random</router-link>
     </div>
   </div>
   <router-view />
@@ -24,10 +23,12 @@
 }
 
 .navstyle {
+  position: fixed;
   margin-top: 80px;
   display: flex;
   justify-content: space-around;
   font-size: 18px;
+  width: 30%;
 }
 </style>
 
