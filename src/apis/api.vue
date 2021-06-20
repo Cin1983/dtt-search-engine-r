@@ -3,20 +3,22 @@
     <div class="container">
       <div class="button-wrapper">
         <button class="btn" @click="searchUnsplash('Autumn')">Autumn</button>
+        <!-- <img :src="images.urls.small" :alt="images.alt_description" /> -->
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 import axios from "axios";
-searchUnsplash(topic)
-{
-  this.images = [];
-  axios
-    .get(
-      `https://api.unsplash.com/GET/photos/random?query=${topic}&per_page=10`,
+
+export default {
+  name: "api",
+  methods: {
+searchUnsplash(topic){
+  if (!this.images) this.images=[]
+  axios.get(
+      `https://api.unsplash.com/photos/random?query=${topic}&per_page=10`,
 
       {
         headers: {
@@ -27,7 +29,14 @@ searchUnsplash(topic)
       }
     )
     .then((response) => {
-      this.images = response.data.results;
+      this.images.push(response.data);
+      console.log(this.images);
     });
 }
+}
+
+
+
+};
+
 </script>

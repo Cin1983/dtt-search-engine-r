@@ -3,8 +3,8 @@
     <div class="navstyle">
       <router-link to="/">Home</router-link>
       <router-link to="/categories">Categories</router-link>
-      
     </div>
+    <api />
   </div>
   <router-view />
 </template>
@@ -34,9 +34,11 @@
 </style>
 
 <script>
+import api from "./apis/api.vue";
 export default {
   name: "App",
   components: {
+    api,
   },
 };
 </script>
