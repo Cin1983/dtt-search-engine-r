@@ -3,6 +3,7 @@
     <div class="navstyle">
       <router-link to="/">Home</router-link>
       <router-link to="/categories">Categories</router-link>
+      
     </div>
   </div>
   <router-view />
