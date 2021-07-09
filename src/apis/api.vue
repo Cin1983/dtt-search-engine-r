@@ -1,14 +1,3 @@
-<template>
-  <div id="api">
-    <div class="container">
-      <div class="button-wrapper">
-        <button class="btn" @click="searchUnsplash('Autumn')">Autumn</button>
-        <!-- <img :src="images.urls.small" :alt="images.alt_description" /> -->
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 import axios from "axios";
 
